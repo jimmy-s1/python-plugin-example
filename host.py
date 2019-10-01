@@ -12,7 +12,7 @@ def loadPlugins(dir):
 	for file in os.listdir(dir):
 		# only load .py files
 		if(file.endswith(".py")==False):
-			break
+			continue
 			
 		# load plugin
 		spec = importlib.util.spec_from_file_location(file, dir+file)
